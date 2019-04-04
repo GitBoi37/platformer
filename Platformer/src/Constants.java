@@ -11,5 +11,6 @@ public class Constants {
     public final int DEFAULTWIDTH = 100;
     public final int DEFAULTHEIGHT = 10;
 	public final int SPAWNPLATFORMDELAY = 100;
+	public int testint = 0;
     public Constants() {}
 }
