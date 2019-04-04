@@ -24,7 +24,7 @@ public class Game extends JPanel implements Runnable, KeyListener{
     private ArrayList<GameObject> all = new ArrayList<GameObject>();
     private Square player = new Square();
     private int score = 0;
-    public Game(){
+    public Game() {
         super();
         setBackground(Color.BLACK);
         setFocusable(true);
