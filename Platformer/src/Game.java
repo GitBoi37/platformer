@@ -129,6 +129,7 @@ public class Game extends JPanel implements Runnable, KeyListener{
     			e.shiftX(constants.SHIFT);
     		}
     	}
+    	//check size and bounds
         if(player.getSize() < constants.minSize) {
             player.setSize(constants.minSize);
         }
@@ -156,29 +157,12 @@ public class Game extends JPanel implements Runnable, KeyListener{
         //collision detection for platforms
         for(int i = 0; i < platforms.size(); i++) {
         	Rectangle r = platforms.get(i).getRect();
-        	if(player.getY() + player.getSize() < r.getY() && player.getY() + player.getSize() > r.getY() - 5) {
+        	if(player.getY() + player.getSize() < r.getY() && player.getY() + player.getSize() > r.getY() - 4) {
         		if(player.getX() + player.getSize() > r.getX() && player.getX() < r.getX() + r.getWidth()) {
         			gravity = 0;
         		}
         	}
-        	/*
-        	if(player.getRect().intersects(r)) {
-        		gravity = 0;
-        		if(player.getY() < platforms.get(i).getY()) {
-        			
-        		}
-        		else {
-        			player.setNewX(player.getX());
-        		}
-        		if(player.getX() + player.getSize() > r.getX() && tickCounter % constants.UPDATE == 0) {
-        			if(player.getY() + player.getSize()-5 < platforms.get(i).getY()) {
-            			
-            		}
-        			else {
-        				player.setNewX(player.getNewX() + constants.SHIFT);
-        			}
-        		}
-        	}*/
+        	
         }
         player.setNewY(player.getNewY()+gravity);        
         
