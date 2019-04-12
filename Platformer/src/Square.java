@@ -1,3 +1,4 @@
+
 import java.awt.Rectangle;
 
 public class Square implements GameObject{
