@@ -6,7 +6,6 @@ public class Square implements GameObject{
 	private int size = 50;
 	private int newX = 0;
 	private int newY = 0;
-	public boolean onGround = false;
 	public Square() {}
 	public void shiftX(int x) {
 		this.x -= x;
