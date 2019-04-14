@@ -1,5 +1,5 @@
 public class Constants {
-	//dot constants
+    //dot constants
     public final int DOTDAMAGE = 1;
     public final int DOTSPEED = 1;
     public final int DOTVALUE = 1;
@@ -20,7 +20,9 @@ public class Constants {
     public final int LOWSPAWN = 10;
     public final int DEFAULTWIDTH = 100;
     public final int DEFAULTHEIGHT = 10;
-	public final int SPAWNPLATFORMDELAY = 100;
-	public final int NUMTOSPAWN = 3;
+    public final int SPAWNPLATFORMDELAY = 100;
+  	public final int NUMTOSPAWN = 3;
+    public final int SPAWNPLATFORMDELAY = 100;
+    public int testint = 0;
     public Constants() {}
 }
