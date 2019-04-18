@@ -4,16 +4,17 @@ public class GoodDot extends Dot{
     private int sliding = 0;
     public GoodDot(){
         super();
-        scoreValue = constants.DOTVALUE;
+        setScoreValue(constants.DOTVALUE);
     }
     public GoodDot(int top, int bottom, int left, int right, int buffer){
         super(top,bottom,left,right,buffer);
+        setScoreValue(constants.DOTVALUE);
     }
     public GoodDot(int top, int bottom, int left, int right, int buffer, int v){
-        this.scoreValue = v;
+    	super(top,bottom,left,right,buffer);
+        this.setScoreValue(v);
     }
     public boolean inProximity(int[] pos){
-        boolean proxim = false;
         if(Math.abs(getX() - pos[0]) < constants.DOTPROXIM && Math.abs(getX() - pos[1]) < constants.DOTPROXIM){
             return true;
         }
@@ -21,4 +22,16 @@ public class GoodDot extends Dot{
             return false;
         }
     }
+	public int getScoreValue() {
+		return scoreValue;
+	}
+	public void setScoreValue(int scoreValue) {
+		this.scoreValue = scoreValue;
+	}
+	public int getSliding() {
+		return sliding;
+	}
+	public void setSliding(int sliding) {
+		this.sliding = sliding;
+	}
 }

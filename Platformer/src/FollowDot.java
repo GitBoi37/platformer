@@ -1,12 +1,9 @@
 
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Rectangle;
 public class FollowDot extends Dot{
     private int damage = 0;
     public FollowDot(){
         super();
-        damage = constants.DOTDAMAGE;
+        setDamage(constants.DOTDAMAGE);
     }
     public FollowDot(int top, int bottom, int left, int right, int buffer){
     	//dots.add(new Dot(10, 20, (int)d.getHeight()-10, 20, 10, 20, (int)d.getWidth()-10, 20));
@@ -14,7 +11,7 @@ public class FollowDot extends Dot{
     }
     public FollowDot(int top, int bottom, int left, int right, int buffer, int damage){
     	//dots.add(new Dot(10, 20, (int)d.getHeight()-10, 20, 10, 20, (int)d.getWidth()-10, 20));
-    	this.damage = constants.DOTDAMAGE;
+    	this.setDamage(constants.DOTDAMAGE);
     }
     //pathfinding to wherever, might make better in the future, could lerp it
     //time to LEERRRPPPPP
@@ -32,4 +29,10 @@ public class FollowDot extends Dot{
     		modifyY(-constants.DOTSPEED);
     	}
     }
+	public int getDamage() {
+		return damage;
+	}
+	public void setDamage(int damage) {
+		this.damage = damage;
+	}
 }
