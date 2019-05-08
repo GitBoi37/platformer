@@ -1,9 +1,9 @@
 import java.awt.EventQueue;
 import javax.swing.JFrame;
 
-public class Drive extends JFrame{
+public class GameDriver extends JFrame{
 	private static final long serialVersionUID = 1L;
-	public Drive(){
+	public GameDriver(){
         initUI();
     }
     private void initUI(){
@@ -18,7 +18,7 @@ public class Drive extends JFrame{
     }
     public static void main(String[] args){
         EventQueue.invokeLater(() -> { 
-            JFrame ex = new Drive();
+            JFrame ex = new GameDriver();
             ex.setVisible(true);
         });
     }
